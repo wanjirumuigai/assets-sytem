@@ -1,0 +1,65 @@
+{
+  "assets": [
+    {
+      "id": 1,
+      "assetName": "Desktop Computer",
+      "assetTag": "IT5637",
+      "serialNumber": "ABC123",
+      "purchaseCost": "100000",
+      "category": "Desktops",
+      "model": "Dell Vostro",
+      "acquisition_date": "2023-01-01",
+      "location": "Block A, Room 101",
+      "status": "in_use",
+      "assigned": "John Kamau"
+    },
+    {
+      "assetName": "Asus",
+      "assetTag": "IT678",
+      "serialNumber": "ytu3771",
+      "model": "Asus Zenbook",
+      "category": "laptops",
+      "status": "deployed",
+      "assigned": "Carol",
+      "location": "Marketing",
+      "purchaseCost": "120000",
+      "id": 2
+    },
+    {
+      "assetName": "HP LAPTOP",
+      "assetTag": "ITHP091",
+      "serialNumber": "YDHDBVS3",
+      "model": "HP",
+      "category": "laptops",
+      "status": "obsolete",
+      "assigned": "Steve",
+      "location": "Customer Care",
+      "purchaseCost": "45000",
+      "id": 3
+    },
+    {
+      "assetName": "HP LAPTOP",
+      "assetTag": "ITHP091",
+      "serialNumber": "YDHDBVS2",
+      "model": "HP",
+      "category": "laptops",
+      "status": "obsolete",
+      "assigned": "Steve",
+      "location": "Customer Care",
+      "purchaseCost": "45000",
+      "id": 4
+    },
+    {
+      "assetName": "HP LAPTOP",
+      "assetTag": "ITHP091",
+      "serialNumber": "YDHDBVS1",
+      "model": "HP",
+      "category": "laptops",
+      "status": "obsolete",
+      "assigned": "Steve",
+      "location": "Customer Care",
+      "purchaseCost": "45000",
+      "id": 5
+    }
+  ]
+}

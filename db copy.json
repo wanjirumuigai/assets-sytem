@@ -1,0 +1,28 @@
+{
+    "assets": [
+      {
+        "id": 1,
+        "name": "Desktop Computer",
+        "serial_number": "ABC123",
+        "acquisition_date": "2023-01-01",
+        "location": "Block A, Room 101",
+        "status": "in_use",
+        "assignee": {
+          "name": "John  Kamau",
+          "email": "john.Kamau@example.com",
+          "department": "IT"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Laptop",
+        "serial_number": "DEF456",
+        "acquisition_date": "2023-02-01",
+        "location": "Block A, Room 102",
+        "status": "in_use",
+        "assignee": {
+          "name": "Mary Akoth",
+          "email": "Mary.Akoth@example.com",
+          "department": "Marketing"
+        }
+      } ]}
