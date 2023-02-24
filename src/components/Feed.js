@@ -4,7 +4,7 @@ import AssetsList from "./AssetsList";
 
 function Feed() {
   return (
-    <Box bgcolor="whitesmoke" flex={6} p={2}>
+    <Box bgcolor="whitesmoke" flex={5} p={2}>
       <AssetsList />
     </Box>
   );

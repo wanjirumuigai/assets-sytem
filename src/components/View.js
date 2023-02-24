@@ -1,53 +1,37 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import DataTable from "./DataTable";
 
-const AddItem = ({ onAddAsset }) => {
+function View({ row }) {
   const history = useNavigate();
-  const [assets, setAssets] = useState([]);
-  const [formData, SetFormdata] = useState({
-    assetName: "",
-    assetTag: " ",
-    serialNumber: "",
-    model: "",
-    category: "",
-    status: "",
-    assigned: "",
-    location: "",
-    purchaseCost: "",
+
+  const [formData, setFormData] = useState({
+    assetName: row.assetName,
+    assetTag: row.assetTag,
+    serialNumber: row.serialNumber,
+    model: row.model,
+    category: row.category,
+    status: row.status,
+    assigned: row.assigned,
+    location: row.location,
+    purchaseCost: row.purchaseCost,
   });
+
   function handleChange(event) {
     let name = event.target.name;
     let value = event.target.value;
     event.preventDefault();
-    SetFormdata({
+    setFormData({
       ...formData,
       [name]: value,
     });
   }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("http://localhost:4000/assets", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
-      .then((data) => setAssets([...assets, data]));
-
-    history("/");
-  }
-
   return (
     <div className="addItemContainer">
       <div className="addItem">
         <p onClick={() => history("/")}>
           <button id="close-btn">Close X</button>
         </p>
-        <form onSubmit={handleSubmit}>
+        <form>
           <h1>Add New Asset</h1>
 
           <div className="formcontainer"></div>
@@ -147,6 +131,5 @@ const AddItem = ({ onAddAsset }) => {
       </div>
     </div>
   );
-};
-
-export default AddItem;
+}
+export default View;

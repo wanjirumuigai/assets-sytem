@@ -26,7 +26,7 @@ function Edit({ row, assets, setAssets }) {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
     fetch(`${url}/${row.id}`, {
       method: "PATCH",
       headers: {
@@ -36,9 +36,20 @@ function Edit({ row, assets, setAssets }) {
     })
       .then((res) => res.json())
       .then((data) => {
-        setAssets([...assets, data]);
-        history("/assets");
+        handleUpdateItem(data);
       });
+  }
+  function handleUpdateItem(updatedItem) {
+    const updatedItems = assets.map((item) => {
+      if (item.id === updatedItem.id) {
+        return updatedItem;
+      } else {
+        return item;
+      }
+    });
+
+    setAssets(updatedItems);
+    history("/");
   }
 
   return (
@@ -126,6 +137,11 @@ function Edit({ row, assets, setAssets }) {
           value={formData.purchaseCost}
           onChange={handleUpdate}
         />
+      </td>
+      <td>
+        <p onClick={() => window.location.reload(true)}>
+          <button id="close-btn-edit">Close X</button>
+        </p>
       </td>
 
       <td>
